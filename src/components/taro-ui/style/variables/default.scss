@@ -1,0 +1,453 @@
+/**
+ * Default variables
+ */
+
+@import '../mixins/libs/tint';
+
+$hd: 1 !default; // 基本单位
+
+/* The Color of O2Team Brand */
+$color-brand: #6190e8 !default;
+$color-brand-light: #78a4f4 !default;
+$color-brand-dark: #346fc2 !default;
+
+/* Color */
+$color-success: #13ce66 !default;
+$color-error: #ff4949 !default;
+$color-warning: #ffc82c !default;
+$color-info: #78a4fa !default;
+
+/* Color Palette */
+$color-black-0: #000 !default;
+$color-black-1: #333 !default;
+$color-black-2: #7f7f7f !default;
+$color-black-3: #b2b2b2 !default;
+
+$color-grey-0: #333 !default;
+$color-grey-1: #666 !default;
+$color-grey-2: #999 !default;
+$color-grey-3: #ccc !default;
+$color-grey-4: #e5e5e5 !default;
+$color-grey-5: #f0f0f0 !default;
+$color-grey-6: #f7f7f7 !default;
+
+$color-white: #fff !default;
+
+/* Text Color */
+$color-text-base: #333 !default; // 文字的基本色
+$color-text-base-inverse: #fff !default; // 反色
+$color-text-secondary: #36d57d !default; // 辅助色
+$color-text-placeholder: #c9c9c9 !default;
+$color-text-disabled: #ccc !default;
+$color-text-title: #2c405a !default; // 文章标题
+$color-text-paragraph: #3f536e !default; // 文章段落
+
+/* Link */
+$color-link: #6190e8 !default;
+$color-link-hover: #79a1eb !default;
+$color-link-active: #4f7de2 !default;
+$color-link-disabled: #bfbfbf !default;
+
+/* 背景色 */
+$color-bg: #fff !default;
+$color-bg-base: #fafbfc !default;
+$color-bg-light: #ecf5fd !default;
+$color-bg-lighter: tint($color-bg-light, 50%) !default;
+$color-bg-grey: #f7f7f7 !default;
+
+/* 边框颜色 */
+$color-border-base: #c5d9e8 !default;
+$color-border-split: tint($color-border-base, 20%) !default; // 分割线
+$color-border-light: tint($color-border-base, 30%) !default;
+$color-border-lighter: tint($color-border-base, 50%) !default;
+$color-border-lightest: tint($color-border-base, 80%) !default;
+$color-border-grey: #ccc !default;
+
+/* 图标颜色 */
+$color-icon-base: #ccc !default;
+
+/* Border Radius */
+$border-radius-sm: 2px * $hd !default;
+$border-radius-md: 4px * $hd !default;
+$border-radius-lg: 6px * $hd !default;
+$border-radius-circle: 50% !default;
+
+/* 透明度 */
+$opacity-active: 0.6 !default; // Button 等组件点击态额透明度
+$opacity-disabled: 0.3 !default; // Button 等组件禁用态的透明度
+
+/* Font */
+$font-size-xs: 10px * $hd !default; // 非常用字号，用于标签
+$font-size-sm: 12px * $hd !default; // 用于辅助信息
+$font-size-base: 14px * $hd !default; // 常用字号
+$font-size-lg: 16px * $hd !default; // 常规标题
+$font-size-xl: 18px * $hd !default; // 大标题
+$font-size-xxl: 20px * $hd !default; // 用于大号的数字
+
+/* Line Height */
+$line-height-base: 1 !default; // 单行
+$line-height-en: 1.3 !default; // 英文多行
+$line-height-zh: 1.5 !default; // 中文多行
+
+/* 水平间距 */
+$spacing-h-sm: 5px * $hd !default;
+$spacing-h-md: 8px * $hd !default;
+$spacing-h-lg: 12px * $hd !default;
+$spacing-h-xl: 16px * $hd !default;
+
+/* 垂直间距 */
+$spacing-v-xs: 3px * $hd !default;
+$spacing-v-sm: 6px * $hd !default;
+$spacing-v-md: 9px * $hd !default;
+$spacing-v-lg: 12px * $hd !default;
+$spacing-v-xl: 15px * $hd !default;
+
+/* 图标尺寸 */
+$icon-size-sm: 18px * $hd !default;
+$icon-size-md: 22px * $hd !default;
+$icon-size-lg: 36px * $hd !default;
+
+/* z-index */
+$zindex-divider: 100 !default;
+$zindex-steps: 500 !default;
+$zindex-tab: 600 !default;
+$zindex-form: 700 !default;
+$zindex-nav: 800 !default;
+$zindex-search-bar: 800 !default;
+$zindex-indexes: 805 !default;
+$zindex-flot-layout: 810 !default;
+$zindex-drawer: 900 !default;
+$zindex-modal: 1000 !default;
+$zindex-action-sheet: 1010 !default;
+$zindex-picker: 1010 !default;
+$zindex-curtain: 1080 !default;
+$zindex-message: 1090 !default;
+$zindex-toast: 1090 !default;
+
+/* timing function */
+$timing-func: cubic-bezier(0.36, 0.66, 0.04, 1) !default;
+
+/**
+* CSS cubic-bezier timing functions
+* http://bourbon.io/docs/#timing-functions
+*/
+$ease-in-quad: cubic-bezier(0.55, 0.085, 0.68, 0.53) !default;
+$ease-in-cubic: cubic-bezier(0.55, 0.055, 0.675, 0.19) !default;
+$ease-in-quart: cubic-bezier(0.895, 0.03, 0.685, 0.22) !default;
+$ease-in-quint: cubic-bezier(0.755, 0.05, 0.855, 0.06) !default;
+$ease-in-sine: cubic-bezier(0.47, 0, 0.745, 0.715) !default;
+$ease-in-expo: cubic-bezier(0.95, 0.05, 0.795, 0.035) !default;
+$ease-in-circ: cubic-bezier(0.6, 0.04, 0.98, 0.335) !default;
+$ease-in-back: cubic-bezier(0.6, -0.28, 0.735, 0.045) !default;
+
+$ease-out-quad: cubic-bezier(0.25, 0.46, 0.45, 0.94) !default;
+$ease-out-cubic: cubic-bezier(0.215, 0.61, 0.355, 1) !default;
+$ease-out-quart: cubic-bezier(0.165, 0.84, 0.44, 1) !default;
+$ease-out-quint: cubic-bezier(0.23, 1, 0.32, 1) !default;
+$ease-out-sine: cubic-bezier(0.39, 0.575, 0.565, 1) !default;
+$ease-out-expo: cubic-bezier(0.19, 1, 0.22, 1) !default;
+$ease-out-circ: cubic-bezier(0.075, 0.82, 0.165, 1) !default;
+$ease-out-back: cubic-bezier(0.175, 0.885, 0.32, 1.275) !default;
+
+$ease-in-out-quad: cubic-bezier(0.455, 0.03, 0.515, 0.955) !default;
+$ease-in-out-cubic: cubic-bezier(0.645, 0.045, 0.355, 1) !default;
+$ease-in-out-quart: cubic-bezier(0.77, 0, 0.175, 1) !default;
+$ease-in-out-quint: cubic-bezier(0.86, 0, 0.07, 1) !default;
+$ease-in-out-sine: cubic-bezier(0.445, 0.05, 0.55, 0.95) !default;
+$ease-in-out-expo: cubic-bezier(1, 0, 0, 1) !default;
+$ease-in-out-circ: cubic-bezier(0.785, 0.135, 0.15, 0.86) !default;
+$ease-in-out-back: cubic-bezier(0.68, -0.55, 0.265, 1.55) !default;
+
+/**
+ * 组件变量
+ */
+
+/* Accordion */
+$at-accordion-color-arrow: $color-grey-3 !default;
+
+/* Activity Indicator */
+$at-activity-indicator-font-size: 28px !default;
+$at-activity-indicator-font-color: $color-grey-2 !default;
+
+/* Avatar */
+$at-avatar-color: $color-white !default;
+$at-avatar-bg-color: $color-grey-4 !default;
+$at-avatar-size-sm: 80px !default;
+$at-avatar-size-md: 100px !default;
+$at-avatar-size-lg: 120px !default;
+
+/* Badge */
+$at-badge-color: $color-white !default;
+$at-badge-bg-color: $color-error !default;
+$at-badge-bg: $at-badge-bg-color !default;
+$at-badge-font-size: $font-size-xs !default;
+$at-badge-dot-size: 20px !default;
+
+/* Button */
+$at-button-height: 92px !default;
+$at-button-height-sm: 60px !default;
+$at-button-color: $color-brand !default;
+$at-button-border-color-primary: $color-brand !default;
+$at-button-border-color-secondary: $color-brand !default;
+$at-button-bg: $at-button-color !default;
+
+/* Float Button */
+$at-fab-size: 56px * $hd !default;
+$at-fab-size-sm: 40px * $hd !default;
+$at-fab-icon-size: 24px * $hd !default;
+$at-fab-bg-color: $color-brand;
+$at-fab-bg-color-active: $color-brand-dark;
+$at-fab-box-shadow: 0 6px 10px -2px rgba(0, 0, 0, 0.2),
+  0 12px 20px 0 rgba(0, 0, 0, 0.14), 0 2px 36px 0 rgba(0, 0, 0, 0.12) !default;
+$at-fab-box-shadow-active: 0 14px 16px -8px rgba(0, 0, 0, 0.2),
+  0 24px 34px 4px rgba(0, 0, 0, 0.14), 0 10px 44px 8px rgba(0, 0, 0, 0.12) !default;
+
+/* Calendar */
+$at-calendar-day-size: 72px !default;
+$at-calendar-mark-size: 8px !default;
+$at-calendar-header-color: #b8bfc6 !default;
+$at-calendar-main-color: $color-brand !default;
+$at-calendar-day-color: #7c86a2 !default;
+
+/* Card */
+$at-card-thumb-size: 32px !default;
+$at-card-icon-size: 32px !default;
+$at-card-title-color: $color-text-title !default;
+$at-card-extra-color: $color-text-title !default;
+$at-card-info-color: $color-text-base !default;
+$at-card-note-color: $color-grey-2 !default;
+
+/* Checkbox */
+$at-checkbox-circle-size: 40px !default;
+$at-checkbox-icon-size: $font-size-sm !default;
+$at-checkbox-icon-color: $color-brand !default;
+$at-checkbox-icon-color-checked: $color-white !default;
+$at-checkbox-title-color: $color-text-base !default;
+$at-checkbox-title-font-size: $font-size-lg !default;
+$at-checkbox-desc-font-size: $font-size-sm !default;
+$at-checkbox-desc-color: $color-grey-2 !default;
+
+/* Countdown */
+$at-countdown-font-size: $font-size-lg !default;
+$at-countdown-num-color: $color-text-base !default;
+$at-countdown-card-num-color: #ff4949 !default;
+$at-countdown-card-num-bg-color: $color-white !default;
+
+/* Curtain */
+$at-curtain-btn-color: $color-white !default;
+
+/* Divider */
+$at-divider-height: 112px;
+$at-divider-content-color: $color-brand !default;
+$at-divider-font-size: $font-size-lg !default;
+$at-divider-line-color: $color-grey-3 !default;
+
+/* Drawer */
+$at-drawer-content-width: 460px !default;
+
+/* FloatLayout */
+$float-layout-height-min: 600px !default;
+$float-layout-height-max: 950px !default;
+$float-layout-header-bg-color: $color-bg-grey !default;
+$float-layout-title-color: $color-text-base !default;
+$float-layout-title-font-size: $font-size-lg !default;
+$float-layout-btn-color: $color-grey-3 !default;
+
+/* Grid */
+$at-grid-text-color: $color-text-base !default;
+$at-grid-font-size: $font-size-lg !default;
+$at-grid-img-size: 40px * $hd !default;
+$at-gird-img-size-sm: 50px !default;
+
+/* ImagePicker */
+$at-image-picker-btn-add-color: $color-grey-3 !default;
+$at-image-picker-btn-remove-color: $color-white !default;
+$at-image-picker-btn-remove-bg-color: $color-grey-2 !default;
+
+/* Indexes */
+$at-indexes-nav-color: $color-link !default;
+$at-indexes-nav-font-size: $font-size-sm !default;
+$at-indexes-title-color: $color-black-2 !default;
+$at-indexes-title-font-size: $font-size-sm !default;
+$at-indexes-title-bg-color: $color-grey-6 !default;
+
+/* InputNumber */
+$at-input-number-text-color: $color-text-base !default;
+$at-input-number-font-size: $font-size-base !default;
+$at-input-number-font-size-lg: $font-size-xl !default;
+$at-input-number-btn-color: $color-brand !default;
+$at-input-number-btn-size: 30px !default;
+$at-input-number-btn-size-lg: 36px !default;
+$at-input-number-width-min: 80px !default;
+$at-input-number-width-min-lg: 120px !default;
+
+/* Input */
+$at-input-label-color: $color-text-base !default;
+$at-input-text-color: $color-text-base !default;
+$at-input-font-size: $font-size-lg !default;
+$at-input-placeholder-color: $color-grey-3 !default;
+
+/* List */
+$at-list-thumb-size: 56px !default;
+$at-list-arrow-color: $color-grey-3 !default;
+$at-list-text-color: $color-text-base !default;
+$at-list-content-color: $color-grey-2 !default;
+$at-list-extra-color: $color-grey-2 !default;
+$at-list-extra-width: 235px !default;
+
+/* LoadMore */
+$at-load-more-height: 80px !default;
+$at-load-more-tips-color: $color-grey-1 !default;
+$at-load-more-tips-size: $font-size-lg !default;
+
+/* Loading */
+$at-loading-size: 36px !default;
+$at-loading-color: $color-brand !default;
+
+/* Message */
+$at-message-color: $color-white !default;
+$at-message-font-size: $font-size-base !default;
+$at-message-bg-color: $color-info !default;
+
+/* Modal */
+$at-modal-width: 540px !default;
+$at-modal-header-text-color: $color-text-base !default;
+$at-modal-content-text-color: $color-text-base !default;
+$at-modal-btn-default-color: $color-text-base !default;
+$at-modal-btn-confirm-color: $color-brand !default;
+$at-modal-bg-color: $color-white !default;
+
+/* NavBar */
+$at-nav-bar-title-color: $color-text-base !default;
+$at-nav-bar-link-color: $color-brand !default;
+
+/* NoticeBar */
+$at-noticebar-text-color: #de8c17 !default;
+$at-noticebar-bg-color: #fcf6ed !default;
+$at-noticebar-font-size: $font-size-sm !default;
+$at-noticebar-icon-size: 30px !default;
+$at-noticebar-btn-close-size: 32px !default;
+$at-noticebar-btn-close-color: $color-grey-3 !default;
+
+/* Pagination */
+$at-pagination-margin: 40px !default;
+$at-pagination-num-color: $color-text-base !default;
+$at-pagination-num-font-size: $font-size-base !default;
+$at-pagination-current-num-color: $color-brand !default;
+$at-pagination-icon-color: $color-text-base !default;
+$at-pagination-icon-font-size: 32px !default;
+
+/* Progress */
+$at-progress-height: 16px !default;
+$at-progress-text-size: $font-size-sm !default;
+$at-progress-icon-size: $font-size-xl !default;
+$at-progress-inner-bg-color: $color-grey-6 !default;
+$at-progress-bar-bg-color: $color-brand-light !default;
+$at-progress-bar-bg-color-active: $color-white !default;
+
+/* Radio */
+$at-radio-title-color: $color-text-base !default;
+$at-radio-title-size: $font-size-lg !default;
+$at-radio-desc-color: $color-grey-2 !default;
+$at-radio-desc-size: $font-size-sm !default;
+$at-radio-check-color: $color-brand !default;
+
+/* Range */
+$at-range-slider-size: 28px !default;
+$at-range-rail-height: 2px !default;
+$at-range-rail-bg-color: #e9e9e9 !default;
+$at-range-track-bg-color: $color-brand !default;
+$at-range-slider-color: $color-white !default;
+$at-range-slider-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.2) !default;
+
+/* Rate */
+$at-rate-icon-size: 20px !default;
+$at-rate-star-color: #ececec !default;
+$at-rate-star-color-on: #ffca3e !default;
+
+/* SearchBar */
+$at-search-bar-btn-color: $color-white !default;
+$at-search-bar-btn-bg-color: $color-brand !default;
+
+/* SegmentedControl */
+$at-segmented-control-color: $color-brand !default;
+$at-segmented-control-color-active: $color-white !default;
+$at-segmented-control-bg-color: transparent !default;
+$at-segmented-control-font-size: $font-size-base !default;
+
+/* Slider */
+$at-slider-text-color: $color-grey-2 !default;
+$at-slider-text-size: $font-size-base !default;
+
+/* Steps */
+$at-steps-circle-size: 56px !default;
+$at-steps-icon-size: $font-size-sm !default;
+$at-steps-color: $color-white !default;
+$at-steps-color-active: $color-grey-2 !default;
+$at-steps-bg-color: $color-grey-4 !default;
+$at-steps-bg-color-active: $color-brand !default;
+$at-steps-line-color: $color-grey-3 !default;
+$at-steps-title-color: $color-black-0 !default;
+$at-steps-title-size: $font-size-lg !default;
+$at-steps-desc-color: $color-grey-3 !default;
+$at-steps-desc-size: $font-size-sm !default;
+
+/* SwipeAction */
+$at-swipe-action-color: $color-white !default;
+$at-swipe-action-font-size: $font-size-base !default;
+$at-swipe-action-bg-color: $color-white !default;
+$at-swipe-action-option-bg-color: $color-grey-2 !default;
+
+/* Switch */
+$at-switch-title-color: $color-text-base !default;
+$at-switch-title-size: $font-size-base !default;
+
+/* TabBar */
+$at-tab-bar-bg-color: $color-white !default;
+$at-tab-bar-color: $color-text-base !default;
+$at-tab-bar-color-active: $color-brand !default;
+$at-tab-bar-font-size: $font-size-base !default;
+$at-tab-bar-icon-color: $color-grey-0 !default;
+$at-tab-bar-icon-font-size: 48px !default;
+$at-tab-bar-icon-image-size: 50px !default;
+
+/* Tabs */
+$at-tabs-color: $color-text-base !default;
+$at-tabs-color-active: $color-brand !default;
+$at-tabs-font-size: $font-size-base !default;
+$at-tabs-line-height: 1px !default;
+$at-tabs-underline-color: $color-grey-5 !default;
+$at-tabs-bg-color: $color-bg !default;
+
+/* Tag */
+$at-tag-height: 60px !default;
+$at-tag-height-sm: 40px !default;
+$at-tag-color: $color-grey-1 !default;
+$at-tag-color-primary: $color-grey-1 !default;
+$at-tag-color-active: $color-brand-light !default;
+$at-tag-color-primary-active: $color-text-base-inverse !default;
+$at-tag-font-size: $font-size-base !default;
+$at-tag-font-size-sm: $font-size-xs !default;
+$at-tag-bg-color: $color-bg-grey !default;
+$at-tag-bg-color-primary: $color-bg-grey !default;
+$at-tag-bg-color-active: $color-white !default;
+$at-tag-bg-color-primary-active: $at-tag-color-active !default;
+$at-tag-border-color: $at-tag-bg-color !default;
+$at-tag-border-color-primary: $at-tag-bg-color !default;
+$at-tag-border-color-active: $at-tag-color-active !default;
+
+/* Textarea */
+$at-textarea-font-size: $font-size-lg !default;
+$at-textarea-tips-color: $color-text-placeholder !default;
+$at-textarea-tips-size: $font-size-base !default;
+
+/* Timeline */
+$at-timeline-offset-left: 40px !default;
+$at-timeline-title-color: $color-grey-0 !default;
+$at-timeline-title-font-size: $font-size-base !default;
+$at-timeline-desc-color: $color-grey-1 !default;
+$at-timeline-desc-font-size: $font-size-sm !default;
+$at-timeline-dot-size: 24px !default;
+$at-timeline-dot-color: $color-bg !default;
+$at-timeline-dot-border-color: $color-brand-light !default;
+$at-timeline-line-color: $color-border-lighter !default;
