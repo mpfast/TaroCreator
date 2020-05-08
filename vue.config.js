@@ -4,6 +4,7 @@ module.exports = {
   pluginOptions: {
     electronBuilder: {
       builderOptions: {
+        publish: ['github'],
         appId: 'taro.creator.app',
         productName: 'TaroCreator',
         copyright: 'Copyright © 2020 深圳之了网络科技有限公司',
@@ -29,7 +30,8 @@ module.exports = {
           installerHeaderIcon: './appicon/icon.ico',
           createDesktopShortcut: true,
           createStartMenuShortcut: true,
-          shortcutName: 'TaroCreator'
+          shortcutName: 'TaroCreator',
+          artifactName: 'TaroCreator-${version}.${ext}'
         },
         mac: {
           target: 'dmg',
@@ -50,6 +52,7 @@ module.exports = {
               path: '/Applications'
             }
           ],
+          artifactName: 'TaroCreator-${version}.${ext}',
           window: {
             x: 400,
             y: 100

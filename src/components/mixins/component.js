@@ -23,7 +23,7 @@ export default {
       let slots = ''
       const componentTag = this.$options._componentTag
       for (const key in this.$props) {
-        if (this.$props[key]) {
+        if (this.$props[key] !== '') {
           if (key === 'slots') {
             slots = this.$props[key]
           } else if (Array.isArray(this.$props[key])) {
@@ -44,7 +44,7 @@ export default {
     objectToString(style) {
       if (style && typeof style === 'object') {
         let styleStr = ''
-        Object.keys(style).forEach((key) => {
+        Object.keys(style).forEach(key => {
           const lowerCaseKey = key.replace(/([A-Z])/g, '-$1').toLowerCase()
           styleStr += `${lowerCaseKey}:${style[key]};`
         })
