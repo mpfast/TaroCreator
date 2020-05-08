@@ -9,7 +9,7 @@
     "lint": "vue-cli-service lint",
     "dev": "vue-cli-service electron:serve",
     "build": "vue-cli-service electron:build",
-    "publish": "vue-cli-service electron:build -p always",
+    "release": "vue-cli-service electron:build -p always",
     "postinstall": "electron-builder install-app-deps",
     "postuninstall": "electron-builder install-app-deps"
   },
