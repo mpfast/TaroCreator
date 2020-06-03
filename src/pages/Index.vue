@@ -601,7 +601,7 @@ export default {
       }
       const zip = new AdmZip(templatePath)
       // add file directly
-      zip.addFile('/src/app.tsx', new Buffer(appTsx))
+      zip.addFile('/src/app.tsx', Buffer.from(appTsx))
       for (let i = 0; i < this.pages.length; i++) {
         const index = this.pages.findIndex(page => page == this.pages[i])
         const pages = _cloneDeep(this.pages)
@@ -609,7 +609,7 @@ export default {
         this.$store.commit('updatePages', pages)
         this.$store.commit('delCurrentGuid')
         const code = await this.getPagesCode()
-        zip.addFile(`/src/${this.pages[0].path}.tsx`, new Buffer(code))
+        zip.addFile(`/src/${this.pages[0].path}.tsx`, Buffer.from(code))
         console.log('writePage: ' + this.pages[0].config.navigationBarTitleText)
       }
       const { filePath, canceled } = await dialog.showSaveDialog({
