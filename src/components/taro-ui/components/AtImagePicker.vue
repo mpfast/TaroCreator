@@ -19,9 +19,9 @@
           <div class="at-image-picker__remove-btn"></div>
           <div class="taro-img at-image-picker__preview-img">
             <img
-              :class="`taro-img__mode-${mode
-                .replace(/\s/, '')
-                .toLocaleLowerCase()}`"
+              :class="
+                `taro-img__mode-${mode.replace(/\s/, '').toLocaleLowerCase()}`
+              "
               :src="item.url"
             />
           </div>
@@ -136,11 +136,22 @@ export default {
       }
     },
     matrix() {
-      const rowLength = this.length <= 0 ? 1 : this.length
-      const group = this.showAddBtn
-        ? [...this.files, { type: 'btn' }]
-        : [...this.files]
-      return _chunk(group, rowLength)
+      let matrix = this.files
+      const rowLength = this.showAddBtn ? matrix.length + 1 : matrix.length
+      const pads =
+        rowLength % this.length ? this.length - (rowLength % this.length) : 0
+      if (pads) {
+        // 填补剩下的空列
+        const blanks = [...new Array(pads)].map(() => {
+          return { type: 'blank' }
+        })
+        matrix = this.showAddBtn
+          ? [...this.files, { type: 'btn' }, ...blanks]
+          : [...this.files, ...blanks]
+      } else {
+        matrix = this.showAddBtn ? [...this.files, { type: 'btn' }] : this.files
+      }
+      return _chunk(matrix, this.length)
     }
   }
 }
