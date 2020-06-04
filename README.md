@@ -1,4 +1,5 @@
 # TaroCreator
+[![Build Status](https://travis-ci.org/mpfast/TaroCreator.svg?branch=master)](https://travis-ci.org/mpfast/TaroCreator)
 
 ## 介绍
 
