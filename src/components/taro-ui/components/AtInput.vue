@@ -152,6 +152,10 @@ export default {
     },
     attrs() {
       return {
+        type: {
+          type: 'select',
+          items: ['text', 'number', 'password', 'phone', 'idcard', 'digit']
+        },
         adjustPosition: {
           type: 'boolean'
         },
