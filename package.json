@@ -20,7 +20,7 @@
     "highlight.js": "^9.18.1",
     "nodemailer": "^6.4.6",
     "qrcode.vue": "^1.7.0",
-    "swiper": "^5.3.6",
+    "swiper": "^6.5.1",
     "taro-ui": "^2.3.2",
     "vue": "^2.6.11",
     "vue-router": "^3.1.6",
