@@ -6412,10 +6412,10 @@ node-releases@^1.1.53:
   resolved "https://registry.npm.taobao.org/node-releases/download/node-releases-1.1.55.tgz?cache=0&sync_timestamp=1588708625317&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fnode-releases%2Fdownload%2Fnode-releases-1.1.55.tgz#8af23b7c561d8e2e6e36a46637bab84633b07cee"
   integrity sha1-ivI7fFYdji5uNqRmN7q4RjOwfO4=
 
-nodemailer@^6.4.6:
-  version "6.4.6"
-  resolved "https://registry.npm.taobao.org/nodemailer/download/nodemailer-6.4.6.tgz#d37f504f6560b36616f646a606894fe18819107f"
-  integrity sha1-039QT2Vgs2YW9kamBolP4YgZEH8=
+nodemailer@^6.6.1:
+  version "6.6.1"
+  resolved "https://registry.yarnpkg.com/nodemailer/-/nodemailer-6.6.1.tgz#2a05fbf205b897d71bf43884167b5d4d3bd01b99"
+  integrity sha512-1xzFN3gqv+/qJ6YRyxBxfTYstLNt0FCtZaFRvf4Sg9wxNGWbwFmGXVpfSi6ThGK6aRxAo+KjHtYSW8NvCsNSAg==
 
 normalize-package-data@^2.3.2, normalize-package-data@^2.3.4, normalize-package-data@^2.5.0:
   version "2.5.0"
